@@ -1,0 +1,26 @@
+:root{--bg1:#ffecd2;--bg2:#fcb69f;--accent-x:#ff1744;--accent-o:#00e676;--card:rgba(255,255,255,0.95);--muted:rgba(0,0,0,0.6)}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Poppins',sans-serif;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:#222;min-height:100vh}
+.site-header{display:flex;justify-content:center;align-items:center;padding:18px 10px}
+.site-header h1{margin:0;font-size:1.8rem;color:var(--accent-x);text-shadow:1px 1px rgba(255,255,255,0.6)}
+.main{max-width:980px;margin:12px auto;padding:18px;display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+.setup{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,0.08);width:100%;max-width:760px}
+.names-form{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.names-form label{font-size:0.95rem;color:var(--muted)}
+.names-form input{padding:8px 10px;border-radius:8px;border:1px solid #ddd;min-width:150px}
+.btn{padding:10px 14px;border-radius:8px;border:none;cursor:pointer;background:#eee}
+.btn.primary{background:linear-gradient(90deg,#ff8a65,#ff6f61);color:#fff}
+.btn.danger{background:#f44336;color:#fff}
+.scoreboard{display:flex;gap:18px;margin-bottom:12px;font-weight:600}
+.board{display:grid;grid-template-columns:repeat(3,120px);gap:12px;justify-content:center;margin:12px 0}
+.cell{width:120px;height:120px;background:linear-gradient(180deg,#fff,#fffefc);border-radius:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:2.8rem;box-shadow:0 8px 20px rgba(0,0,0,0.08);border:none}
+.cell:hover:not(:disabled){transform:translateY(-6px)}
+.cell.X{color:var(--accent-x);text-shadow:0 6px 20px rgba(255,23,68,0.12)}
+.cell.O{color:var(--accent-o);text-shadow:0 6px 20px rgba(0,230,118,0.12)}
+.cell.win{box-shadow:0 0 30px rgba(255,215,0,0.18) inset;transform:scale(1.03)}
+.status{margin-top:8px;font-weight:600}
+.controls-bottom{margin-top:12px;display:flex;gap:8px}
+.history{background:var(--card);padding:12px;border-radius:10px;flex:1;max-height:220px;overflow:auto}
+.site-footer{text-align:center;padding:14px 0;margin-top:18px;color:rgba(0,0,0,0.6)}
+.page-exit .exit-card{max-width:720px;margin:40px auto;background:var(--card);padding:20px;border-radius:12px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,0.12)}
+.confetti-canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999}
